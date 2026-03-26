@@ -5,6 +5,7 @@ class Vehiculo {
     private int tipoVehiculo;
 
     public Vehiculo(String matricula, int tipoVehiculo, String modelo){
+        assert tipoVehiculo == 1 || tipoVehiculo == 2 ||tipoVehiculo == 3 : "No es un tipo de vehículo válido";
         this.matricula = matricula;
         this.modelo = modelo;
         this.tipoVehiculo = tipoVehiculo;
