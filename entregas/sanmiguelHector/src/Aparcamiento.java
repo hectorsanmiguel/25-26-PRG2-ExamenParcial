@@ -49,7 +49,11 @@ class Aparcamiento {
         }
     }
 
-    public void mostrarDatos(){}
+    public void mostrarDatos(){
+        System.out.println("Está usted en el Aparcamiento " + this.nombreAparcamiento);
+        System.out.println("Disponemos de " + this.totalPlazas + "plazas en nuestro aparcamiento");
+        System.out.println("Actualmente hay " + this.cantidadPlazasLibres() + " plazas libres");   
+    }
 
     public int dineroFacturado(){}
 
