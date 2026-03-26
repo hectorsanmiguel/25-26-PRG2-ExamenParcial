@@ -49,6 +49,9 @@ class Plaza {
         this.matriculaVehiculo = null;
     }
 
+    public int tipoDePlaza(){
+        return this.tipoPlaza;
+    }
 
     public void mostrarDatos(){}
 

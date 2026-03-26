@@ -25,4 +25,7 @@ class Vehiculo {
         return this.matricula;
     }
     
+    public int tipoDelVehiculo(){
+        return this.tipoVehiculo;
+    }
 }

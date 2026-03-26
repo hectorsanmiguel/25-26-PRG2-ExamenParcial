@@ -33,13 +33,18 @@ class Aparcamiento {
         return plazasLibres;
     }
 
-    public void vehiculoLLego(Vehiculo vehiculo){
-        for (int i = 0; i < this.plazas.length; i++){
-            Plaza plazaActual = this.plazas[i];
+    public void vehiculoLLego(Vehiculo vehiculo) {
+    for (int i = 0; i < this.plazas.length; i++) {
+        Plaza plazaActual = this.plazas[i];
+        
+        if (plazaActual.tipoDePlaza() == vehiculo.tipoDelVehiculo() && !plazaActual.estaOcupada()) {
             plazaActual.ocuparPlaza(vehiculo.matricula());
-            System.out.println("Vehículo aparcado");
+            System.out.println("Vehículo " + vehiculo.matricula() + " aparcado en plaza " + i);
+            return;
         }
     }
+    System.out.println("No hay plazas libres para este tipo de vehículo.");
+}
 
     public void vehiculoSeFue(Vehiculo vehiculo, int horaLlegada, int horaSalida){
         for (int i = 0; i < this.plazas.length; i++){
