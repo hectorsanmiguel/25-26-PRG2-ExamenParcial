@@ -40,7 +40,14 @@ class Aparcamiento {
         }
     }
 
-    public void vehiculoSeFue(){}
+    public void vehiculoSeFue(Vehiculo vehiculo, int horaLlegada, int horaSalida){
+        for (int i = 0; i < this.plazas.length; i++){
+            Ticket ticket = new Ticket(horaLlegada, horaSalida, this.plazas[i], vehiculo);
+            ticket.mostrarTicket();
+            this.plazas[i].liberarPlaza();
+            vehiculo.eliminarVehiculo();
+        }
+    }
 
     public void mostrarDatos(){}
 
