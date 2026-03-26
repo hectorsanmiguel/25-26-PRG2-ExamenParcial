@@ -3,6 +3,11 @@ class Plaza {
     private int tipoPlaza;
     private boolean ocupada;
     private String matriculaVehiculo;
+    private int precioPorHora;
+
+    private int precioNormal = 3;
+    private int precioElectrico = 5;
+    private int precioMoto = 2;
 
 
     public Plaza (int tipoPlaza, boolean ocupada){
@@ -15,7 +20,20 @@ class Plaza {
         return this.ocupada;
     }
 
-    public int precioPlaza(){}
+    public int precioPlaza(){
+        switch (this.tipoPlaza){
+            case 1:
+                precioPorHora = precioNormal;
+                break;
+            case 2:
+                precioPorHora = precioElectrico;
+                break;
+            case 3:
+                precioPorHora = precioMoto;
+                break;
+        }
+        return precioPorHora;
+    }
 
     public String quienOcupaPlaza(){}
 
