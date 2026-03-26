@@ -29,5 +29,4 @@ class Ticket {
         System.out.println("Tiempo total: " + this.horasAparcado());
         System.out.println("Precio total a pagar:  " + this.precioTotalEstancia() + "€");
     }
-
 }

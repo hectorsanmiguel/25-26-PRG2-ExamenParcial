@@ -66,5 +66,4 @@ class Plaza {
                 break;
         }
     }
-
 }
