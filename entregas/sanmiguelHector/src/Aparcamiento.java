@@ -3,6 +3,7 @@ class Aparcamiento {
     private String nombreAparcamiento;
     private Plaza[] plazas;
     private int totalPlazas;
+    private int totalFacturado = 0;
     
     public Aparcamiento(int numeroPlazasNormal, int numeroPlazasElectrico, int numeroPlazasMoto, String nombreAparcamiento){
         this.nombreAparcamiento = nombreAparcamiento;
@@ -44,6 +45,9 @@ class Aparcamiento {
         for (int i = 0; i < this.plazas.length; i++){
             Ticket ticket = new Ticket(horaLlegada, horaSalida, this.plazas[i], vehiculo);
             ticket.mostrarTicket();
+
+            this.totalFacturado += ticket.precioTotalEstancia();
+
             this.plazas[i].liberarPlaza();
             vehiculo.eliminarVehiculo();
         }
@@ -55,6 +59,8 @@ class Aparcamiento {
         System.out.println("Actualmente hay " + this.cantidadPlazasLibres() + " plazas libres");   
     }
 
-    public int dineroFacturado(){}
+    public int dineroFacturado(){
+        return this.totalFacturado;
+    }
 
 }
