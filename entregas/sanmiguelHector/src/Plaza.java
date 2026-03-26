@@ -39,6 +39,17 @@ class Plaza {
         return this.matriculaVehiculo;
     }
 
+    public void ocuparPlaza(String matricula){
+        this.ocupada = true;
+        this.matriculaVehiculo = matricula;
+    }
+
+    public void liberarPlaza(){
+        this.ocupada = false;
+        this.matriculaVehiculo = null;
+    }
+
+
     public void mostrarDatos(){}
 
 }

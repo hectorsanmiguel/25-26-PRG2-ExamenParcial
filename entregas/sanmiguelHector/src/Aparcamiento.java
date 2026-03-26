@@ -24,7 +24,7 @@ class Aparcamiento {
 
     public int cantidadPlazasLibres(){
         int plazasLibres = 0;
-        for (int i = 0; i < plazas.length; i++){
+        for (int i = 0; i < this.plazas.length; i++){
             if(!plazas[i].estaOcupada()){
                 plazasLibres++;
             }
@@ -32,7 +32,12 @@ class Aparcamiento {
         return plazasLibres;
     }
 
-    public void vehiculoLLego(){}
+    public void vehiculoLLego(Vehiculo vehiculo){
+        for (int i = 0; i < this.plazas.length; i++){
+            Plaza plazaActual = this.plazas[i];
+            
+        }
+    }
 
     public void vehiculoSeFue(){}
 
