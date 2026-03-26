@@ -22,7 +22,15 @@ class Aparcamiento {
         }
     }
 
-    public int cantidadPlazasLibres(){}
+    public int cantidadPlazasLibres(){
+        int plazasLibres = 0;
+        for (int i = 0; i < plazas.length; i++){
+            if(!plazas[i].estaOcupada()){
+                plazasLibres++;
+            }
+        }
+        return plazasLibres;
+    }
 
     public void vehiculoLLego(){}
 
