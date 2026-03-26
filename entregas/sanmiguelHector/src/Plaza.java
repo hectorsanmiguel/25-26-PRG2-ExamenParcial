@@ -35,7 +35,9 @@ class Plaza {
         return precioPorHora;
     }
 
-    public String quienOcupaPlaza(){}
+    public String quienOcupaPlaza(){
+        return this.matriculaVehiculo;
+    }
 
     public void mostrarDatos(){}
 
