@@ -6,17 +6,19 @@ class Ticket {
     private Vehiculo vehiculoAsociado;
 
     public Ticket(int horaLLegada, int horaSalida, Plaza plaza, Vehiculo vehiculo){
+        assert horaSalida > horaLLegada : "Las horas introducidas no son válidas";
         this.horaLLegada = horaLLegada;
         this.horaSalida = horaSalida;
         this.plazaAsociada = plaza;
         this.vehiculoAsociado = vehiculo;
     }
 
-
-    public int precioTotalEstancia(){}
-
     public int horasAparcado(){
         return this.horaSalida - this.horaLLegada;
+    }
+
+    public int precioTotalEstancia(){
+        return (this.horasAparcado() * this.plazaAsociada.precioPlaza());
     }
 
     public void mostrarTicket(){}
