@@ -27,7 +27,7 @@ class Ticket {
         System.out.println("Hora de llegada: " + this.horaLLegada);
         System.out.println("Hora de salida: " + this.horaSalida);
         System.out.println("Tiempo total: " + this.horasAparcado());
-        System.out.println("Precio total a pagar:  " + this.precioTotalEstancia());
+        System.out.println("Precio total a pagar:  " + this.precioTotalEstancia() + "€");
     }
 
 }
