@@ -6,6 +6,7 @@ class Plaza {
 
 
     public Plaza (int tipoPlaza, boolean ocupada){
+        assert tipoPlaza == 1 || tipoPlaza == 2 ||tipoPlaza == 3 : "No es un tipo de plaza válido";
         this.tipoPlaza = tipoPlaza;
         this.ocupada = ocupada;
     }
