@@ -53,6 +53,18 @@ class Plaza {
     }
 
     public void mostrarDatos() {
+        System.out.println("Esta plaza es de tipo: ");
+        switch (this.tipoPlaza) {
+            case 1:
+                System.out.print("normal");
+                break;
+            case 2:
+                System.out.print("eléctrico");
+                break;
+            case 3:
+                System.out.print("moto");
+                break;
+        }
     }
 
 }
