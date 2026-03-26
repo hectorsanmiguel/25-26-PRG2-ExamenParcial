@@ -21,6 +21,13 @@ class Ticket {
         return (this.horasAparcado() * this.plazaAsociada.precioPlaza());
     }
 
-    public void mostrarTicket(){}
+    public void mostrarTicket(){
+        System.out.println("[TICKET DE APARCAMIENTO]");
+        this.vehiculoAsociado.mostrarDatos();
+        System.out.println("Hora de llegada: " + this.horaLLegada);
+        System.out.println("Hora de salida: " + this.horaSalida);
+        System.out.println("Tiempo total: " + this.horasAparcado());
+        System.out.println("Precio total a pagar:  " + this.precioTotalEstancia());
+    }
 
 }
