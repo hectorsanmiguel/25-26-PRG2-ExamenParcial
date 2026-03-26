@@ -23,6 +23,10 @@ class Cliente {
 
         System.out.println("------Registrar salidas de vehículos------");
         parkingUNEAT.vehiculoSeFue(seatIbiza, 10, 17);
+        parkingUNEAT.vehiculoSeFue(yamaha, 10, 20);
 
+        System.out.println("------Estado final------");
+        parkingUNEAT.mostrarDatos();
+        System.out.println("Llevamos facturados hasta ahora " + parkingUNEAT.dineroFacturado() + "€");
     }
 }
