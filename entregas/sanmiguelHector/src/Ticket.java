@@ -15,7 +15,9 @@ class Ticket {
 
     public int precioTotalEstancia(){}
 
-    public int horasAparcado(){}
+    public int horasAparcado(){
+        return this.horaSalida - this.horaLLegada;
+    }
 
     public void mostrarTicket(){}
 
